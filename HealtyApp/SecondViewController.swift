@@ -10,10 +10,11 @@ import UIKit
 
 
 class SecondViewController: UIViewController {
-
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.backButton.layer.cornerRadius=15
         // Do any additional setup after loading the view.
     }
     @IBAction func backSplashButton (_ sender : UIButton) {
