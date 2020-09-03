@@ -7,3 +7,18 @@
 //
 
 import Foundation
+struct Food {
+   let name : String
+    let calories, protein, carbo, fat : Int
+    
+    init(name : String, calories : Int, protein : Int, carbo : Int, fat : Int ){
+        self.name=name
+        self.calories=calories
+        self.protein=protein
+        self.carbo=carbo
+        self.fat=fat
+        
+    }
+
+}
+

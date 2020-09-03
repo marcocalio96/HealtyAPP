@@ -9,26 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var foodUI: UIView!
-    @IBOutlet weak var weightUI: UIView!
-    @IBOutlet weak var healtUI: UIView!
+    @IBOutlet weak var caloriesOfTheDay: UILabel!
+    @IBOutlet weak var carbo: UILabel!
+    @IBOutlet weak var protein: UILabel!
+    @IBOutlet weak var fat: UILabel!
+    var i = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Benvenuto Marco"
-        self.foodUI.layer.cornerRadius=20
-        self.weightUI.layer.cornerRadius=20
-        self.healtUI.layer.cornerRadius=20
+        self.title = "Home"
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated )
+        if(i==0) {
         self.performSegue(withIdentifier: "startSplash", sender: nil)
+            i=1;
+        }
         let button1 = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(doSomething))
-        let button2 = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(doSomething2))
-         navigationItem.rightBarButtonItems = [button1, button2]
+         navigationItem.rightBarButtonItems = [button1]
         
+    }
+    
+    @IBAction func addFood(_ sender: Any) {
+        performSegue(withIdentifier: "addFoodViewController", sender: nil)
     }
     
     @objc
@@ -36,12 +41,6 @@ class ViewController: UIViewController {
         print("fai qualcosa")
     }
     
-    @objc
-    func doSomething2() {
-        print("fai qualcosa2")
-    }
     
-    
-
 }
 

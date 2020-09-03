@@ -9,22 +9,43 @@
 import UIKit
 
 class AddFoodViewController: UIViewController {
-
+    
+    @IBOutlet weak var foodName: UITextField!
+    @IBOutlet weak var calories: UITextField!
+    @IBOutlet weak var carbo: UITextField!
+    @IBOutlet weak var protein: UITextField!
+    @IBOutlet weak var fat: UITextField!
+    @IBOutlet weak var add: UIButton!
+    var sFoodName : String = ""
+    var tcalories = 0, tcarbo = 0, tprotein = 0, tfat : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
+    @IBAction func aggiungi(_ sender: Any) {
+        guard let sFoodNameOptional = foodName.text else {
+           fatalError()
+        }
+        sFoodName=sFoodNameOptional
+        tcalories=securityWrap(valueName: calories)
+        tcarbo=securityWrap(valueName: carbo)
+        tprotein=securityWrap(valueName: protein)
+        tfat=securityWrap(valueName: fat)
+        performSegue(withIdentifier: "unwindToList", sender: nil)
+        
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    func securityWrap(valueName : UITextField) -> Int {
+        guard let genericValue = valueName.text else {
+            fatalError()
+        }
+        guard let intValue = Int(genericValue) else {
+            fatalError()
+        }
+        return intValue
+    }
+    
 }
+
