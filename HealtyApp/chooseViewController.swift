@@ -60,6 +60,7 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
         foods.insert(Food.init(name: source.sFoodName, calories: source.tcalories, protein: source.tprotein, carbo: source.tcarbo, fat: source.tfat), at: foods.count)
         print(foods)
         tableView.reloadData()
+        print("Ricarica")
     }
     
 }
