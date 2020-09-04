@@ -212,6 +212,8 @@
                     <navigationItem key="navigationItem" id="thC-sl-sSO"/>
                     <connections>
                         <outlet property="carbo_Change" destination="smz-kN-NQc" id="05c-7Y-k2D"/>
+                        <outlet property="change_Fat" destination="wyA-We-aDZ" id="cGC-p9-DVv"/>
+                        <outlet property="change_Protein" destination="WLA-hl-e2G" id="eLd-J8-JX5"/>
                         <outlet property="kcal_Change" destination="MeJ-jP-pe7" id="h4Y-8A-k2Y"/>
                     </connections>
                 </viewController>

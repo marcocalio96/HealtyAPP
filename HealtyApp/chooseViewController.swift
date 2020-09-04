@@ -45,7 +45,7 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "IdCell", for: indexPath)
-        cell.textLabel?.text=foods[indexPath.row].name + "  \(foods[indexPath.row].calories) kcal  " + String(format: "C : %.1fg ", foods[indexPath.row].carbo) + String(format: "P : %.1fg ", foods[indexPath.row].protein) + String(format: "G : %.1fg", foods[indexPath.row].fat)
+        cell.textLabel?.text=foods[indexPath.row].name + String(format: " %.1fKcal ", foods[indexPath.row].calories) + String(format: "C : %.1fg ", foods[indexPath.row].carbo) + String(format: "P : %.1fg ", foods[indexPath.row].protein) + String(format: "G : %.1fg", foods[indexPath.row].fat)
         return cell
         
         }
@@ -70,7 +70,12 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
         if segue.destination is changeValueFoodViewControlelr {
             let passValue = segue.destination as! changeValueFoodViewControlelr
             let index = sender as! Int
-               
+            passValue.food_name = foods[index].name
+            passValue.calories=foods[index].calories
+            passValue.carbo=foods[index].carbo
+            passValue.fat=foods[index].fat
+            passValue.protein=foods[index].protein
+            passValue.position=index
             }
         }
     }

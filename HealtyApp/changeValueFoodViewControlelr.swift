@@ -11,28 +11,21 @@ import UIKit
 class changeValueFoodViewControlelr: UIViewController {
     @IBOutlet weak var kcal_Change: UILabel!
     @IBOutlet weak var carbo_Change: UILabel!
-    @IBOutlet weak var protein_Change: UILabel!
-    @IBOutlet weak var fat_change: UILabel!
+    @IBOutlet weak var change_Fat: UILabel!
+    @IBOutlet weak var change_Protein: UILabel!
     var food_name : String = ""
-    let calories : Double = 0.0
-    let carbo : Double = 0.0
-    let protein : Double = 0.0
-    let fat : Double = 0.0
+    var calories : Double = 0.0
+    var carbo : Double = 0.0
+    var protein : Double = 0.0
+    var fat : Double = 0.0
+    var position : Int = 0 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title=food_name
+        self.title=food_name + "  \(position)"
+        kcal_Change.text=String(format: " %.1fKcal ", calories)
+        carbo_Change.text=String(format: " %.1fg ", carbo)
+        change_Fat.text=String(format: " %.1fg ", fat)
+        change_Protein.text=String(format: " %.1fg ", protein)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
