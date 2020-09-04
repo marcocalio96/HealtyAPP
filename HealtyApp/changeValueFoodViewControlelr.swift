@@ -14,6 +14,10 @@ class changeValueFoodViewControlelr: UIViewController {
     @IBOutlet weak var protein_Change: UILabel!
     @IBOutlet weak var fat_change: UILabel!
     var food_name : String = ""
+    let calories : Double = 0.0
+    let carbo : Double = 0.0
+    let protein : Double = 0.0
+    let fat : Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()

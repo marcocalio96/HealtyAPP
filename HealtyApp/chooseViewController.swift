@@ -69,7 +69,8 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is changeValueFoodViewControlelr {
             let passValue = segue.destination as! changeValueFoodViewControlelr
-            passValue.food_name = "Pollo"
+            let index = sender as! Int
+               
             }
         }
     }
