@@ -44,9 +44,14 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=tableView.dequeueReusableCell(withIdentifier: "IdCell", for: indexPath)
-        cell.textLabel?.text=foods[indexPath.row].name + String(format: " %.1fKcal ", foods[indexPath.row].calories) + String(format: "C : %.1fg ", foods[indexPath.row].carbo) + String(format: "P : %.1fg ", foods[indexPath.row].protein) + String(format: "G : %.1fg", foods[indexPath.row].fat)
-        return cell
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "IdCell", for: indexPath)
+        let newcell : TableViewCellCustomize = cell as! TableViewCellCustomize
+        newcell.nomeAlimento.text=foods[indexPath.row].name + " \(foods[indexPath.row].weight)g"
+        newcell.chilocal.text=String(format: " %.1fKcal ", foods[indexPath.row].calories)
+        newcell.carboLabel.text=String(format: "%.1fg ", foods[indexPath.row].carbo)
+        newcell.proteinLabel.text=String(format: "%.1fg ", foods[indexPath.row].protein)
+        newcell.fatLabel.text=String(format: "%.1fg", foods[indexPath.row].fat)
+        return newcell
         
         }
     

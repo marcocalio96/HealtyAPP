@@ -93,7 +93,11 @@ class ViewController: UIViewController {
         self.totProtein=totProtein + adjustWeight(valueGenerics: prot, weight: weight)
         self.totFat=totFat + adjustWeight(valueGenerics: fat, weight: weight)
         printValue()
-        list_of_food.insert(Food.init(name: name, calories: calories, protein: prot, carbo: carbo, fat: fat, weight: weight), at: list_of_food.count)
+        let Fcalories=adjustWeight(valueGenerics: calories, weight: weight)
+        let Fprot=adjustWeight(valueGenerics: prot, weight: weight)
+        let Ffat=adjustWeight(valueGenerics: fat, weight: weight)
+        let Fcarb=adjustWeight(valueGenerics: carbo, weight: weight)
+        list_of_food.insert(Food.init(name: name, calories: Fcalories, protein: Fprot, carbo: Fcarb, fat: Ffat, weight: weight), at: list_of_food.count)
         
     }
     
