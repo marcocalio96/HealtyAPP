@@ -86,6 +86,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2278C62502950300CFE6E2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3CD497D9249E1803001CB335 /* ViewController.swift */,
+				3C2B37FD25015D6A00BF709C /* chooseViewController.swift */,
+				3C2B3801250172D000BF709C /* AddFoodViewController.swift */,
+				3C2278C32502269B00CFE6E2 /* changeValueFoodViewControlelr.swift */,
+				3CD49805249E4357001CB335 /* SecondViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3C2278C72502952200CFE6E2 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				3C2B37FF2501720000BF709C /* Food.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		3CD497C9249E1803001CB335 = {
 			isa = PBXGroup;
 			children = (
@@ -109,16 +129,12 @@
 		3CD497D4249E1803001CB335 /* HealtyApp */ = {
 			isa = PBXGroup;
 			children = (
-				3CD497D5249E1803001CB335 /* AppDelegate.swift */,
+				3C2278C72502952200CFE6E2 /* Class */,
+				3C2278C62502950300CFE6E2 /* ViewController */,
 				3CD497D7249E1803001CB335 /* SceneDelegate.swift */,
-				3CD497D9249E1803001CB335 /* ViewController.swift */,
-				3C2B37FD25015D6A00BF709C /* chooseViewController.swift */,
-				3C2278C32502269B00CFE6E2 /* changeValueFoodViewControlelr.swift */,
-				3CD49805249E4357001CB335 /* SecondViewController.swift */,
-				3C2B3801250172D000BF709C /* AddFoodViewController.swift */,
-				3C2B37FF2501720000BF709C /* Food.swift */,
-				3CD497DB249E1803001CB335 /* Main.storyboard */,
+				3CD497D5249E1803001CB335 /* AppDelegate.swift */,
 				3CD497DE249E1805001CB335 /* Assets.xcassets */,
+				3CD497DB249E1803001CB335 /* Main.storyboard */,
 				3CD497E0249E1805001CB335 /* LaunchScreen.storyboard */,
 				3CD497E3249E1805001CB335 /* Info.plist */,
 			);
