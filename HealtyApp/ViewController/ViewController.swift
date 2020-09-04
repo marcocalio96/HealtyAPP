@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var carbo: UILabel!
     @IBOutlet weak var protein: UILabel!
     @IBOutlet weak var fat: UILabel!
+    @IBOutlet weak var Button: UIButton!
+    @IBOutlet weak var groupView: UIView!
+    
     var totCal = 0.0
     var totCarbo = 0.0
     var totProtein = 0.0
@@ -24,6 +27,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Bentornato Marco 💪"
         caloriesOfTheDay.text="0"
+        Button.layer.shadowColor = UIColor.black.cgColor
+        Button.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        Button.layer.shadowRadius = 3
+        Button.layer.shadowOpacity = 0.5
         
     }
     
@@ -55,8 +62,29 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindToHome(_ unwindSegue: UIStoryboardSegue) {
-        let source = unwindSegue.source as! AddFoodViewController
-        updateValue(calories: Double(source.tcalories) , carbo: Double(source.tcarbo) , prot: Double(source.tprotein) , fat: Double(source.tfat),weight: Double(source.tweight), name: source.foodName.text!)
+        if let source = unwindSegue.source as? changeValueFoodViewControlelr {
+            if let oldfood = source.oldValue {
+                if let newFood = source.newValue {
+                    print(totCal)
+                    totCal=totCal-oldfood.calories + newFood.calories
+                    totFat=totFat-oldfood.fat + newFood.fat
+                    totProtein=totProtein-oldfood.protein + newFood.protein
+                    totCarbo=totCarbo-oldfood.carbo + newFood.carbo
+                    printValue()
+                    list_of_food[source.position] = newFood
+                                   
+                 }
+                
+               
+            }
+        }
+        else
+        {
+            print("ELSE")
+            let source = unwindSegue.source as! AddFoodViewController
+            updateValue(calories: Double(source.tcalories) , carbo: Double(source.tcarbo) , prot: Double(source.tprotein) , fat: Double(source.tfat),weight: Double(source.tweight), name: source.foodName.text!)
+            
+        }
     }
     
     func updateValue(calories : Double, carbo : Double, prot : Double, fat : Double, weight : Double, name : String) {
@@ -64,11 +92,8 @@ class ViewController: UIViewController {
         self.totCarbo=totCarbo + adjustWeight(valueGenerics: carbo, weight: weight)
         self.totProtein=totProtein + adjustWeight(valueGenerics: prot, weight: weight)
         self.totFat=totFat + adjustWeight(valueGenerics: fat, weight: weight)
-        self.caloriesOfTheDay.text!=String(format: "%.1fKcal", self.totCal)
-        self.carbo.text!=String(format: "%.1fg", self.totCarbo)
-        self.protein.text!=String(format: "%.1fg", self.totProtein)
-        self.fat.text!=String(format: "%.1fg", self.totFat)
-        list_of_food.insert(Food.init(name: name, calories: self.totCal, protein: self.totProtein, carbo: self.totCarbo, fat: self.totFat, weight: weight), at: list_of_food.count)
+        printValue()
+        list_of_food.insert(Food.init(name: name, calories: calories, protein: prot, carbo: carbo, fat: fat, weight: weight), at: list_of_food.count)
         
     }
     
@@ -77,6 +102,12 @@ class ViewController: UIViewController {
         return finalValue
     }
     
+    func printValue()  {
+        self.caloriesOfTheDay.text!=String(format: "%.1fKcal", self.totCal)
+        self.carbo.text!=String(format: "%.1fg", self.totCarbo)
+        self.protein.text!=String(format: "%.1fg", self.totProtein)
+        self.fat.text!=String(format: "%.1fg", self.totFat)
+    }
     
 }
 

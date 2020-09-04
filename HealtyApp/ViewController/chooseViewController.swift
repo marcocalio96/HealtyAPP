@@ -76,6 +76,7 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
             passValue.fat=foods[index].fat
             passValue.protein=foods[index].protein
             passValue.position=index
+            passValue.oldWeight=foods[index].weight
             }
         }
     }
