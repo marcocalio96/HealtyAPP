@@ -9,14 +9,15 @@
 import Foundation
 struct Food {
    let name : String
-    let calories, protein, carbo, fat : Int
+    let calories, protein, carbo, fat, weight: Double
     
-    init(name : String, calories : Int, protein : Int, carbo : Int, fat : Int ){
+    init(name : String, calories : Double, protein : Double, carbo : Double, fat : Double, weight : Double){
         self.name=name
         self.calories=calories
         self.protein=protein
         self.carbo=carbo
         self.fat=fat
+        self.weight=weight
         
     }
 

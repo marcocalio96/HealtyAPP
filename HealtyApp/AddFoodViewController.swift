@@ -15,9 +15,11 @@ class AddFoodViewController: UIViewController {
     @IBOutlet weak var carbo: UITextField!
     @IBOutlet weak var protein: UITextField!
     @IBOutlet weak var fat: UITextField!
-    @IBOutlet weak var add: UIButton!
+    @IBOutlet weak var weight: UITextField!
+    
     var sFoodName : String = ""
-    var tcalories = 0, tcarbo = 0, tprotein = 0, tfat : Int = 0
+    var tcalories = 0.0, tcarbo = 0.0, tprotein = 0.0, tfat : Double = 0.0
+    var tweight : Double = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,19 +34,20 @@ class AddFoodViewController: UIViewController {
         tcarbo=securityWrap(valueName: carbo)
         tprotein=securityWrap(valueName: protein)
         tfat=securityWrap(valueName: fat)
-        performSegue(withIdentifier: "unwindToList", sender: nil)
+        tweight=securityWrap(valueName: weight)
+        performSegue(withIdentifier: "unwindToHome", sender: nil)
         
 
     }
     
-    func securityWrap(valueName : UITextField) -> Int {
+    func securityWrap(valueName : UITextField) -> Double {
         guard let genericValue = valueName.text else {
             fatalError()
         }
-        guard let intValue = Int(genericValue) else {
+        guard let doubleValue = Double(genericValue) else {
             fatalError()
         }
-        return intValue
+        return doubleValue
     }
     
 }

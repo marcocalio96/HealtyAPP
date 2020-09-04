@@ -3,4 +3,162 @@
    uuid = "014BEEBB-DA9D-40B1-AEBA-B1F7774C7BEE"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38A7640F-2E42-4E63-BC13-2B0EA3241771"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealtyApp/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "unwindToHome(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "557E4A6E-893E-4567-ADD4-7B71F94D944B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealtyApp/AddFoodViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "aggiungi(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CED1F26-02D7-4117-BCDE-A60CAE4C0164"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealtyApp/chooseViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "157191BA-2016-4905-8B0C-B5E9B257D56C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealtyApp/changeValueFoodViewControlelr.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "changeValueFoodViewControlelr"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "157191BA-2016-4905-8B0C-B5E9B257D56C - e4bbc85bdbdddb2e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealtyApp.changeValueFoodViewControlelr.kcal_Change.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "HealtyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcocalio/Desktop/Progetti/HealtyApp/HealtyApp/changeValueFoodViewControlelr.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "157191BA-2016-4905-8B0C-B5E9B257D56C - b12ccb04d7fb6722"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealtyApp.changeValueFoodViewControlelr.kcal_Change.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "HealtyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcocalio/Desktop/Progetti/HealtyApp/HealtyApp/changeValueFoodViewControlelr.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "157191BA-2016-4905-8B0C-B5E9B257D56C - c740905e281f65d1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealtyApp.changeValueFoodViewControlelr.kcal_Change.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "HealtyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcocalio/Desktop/Progetti/HealtyApp/HealtyApp/changeValueFoodViewControlelr.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "157191BA-2016-4905-8B0C-B5E9B257D56C - 815070b40942f791"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealtyApp.changeValueFoodViewControlelr.kcal_Change.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "HealtyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcocalio/Desktop/Progetti/HealtyApp/HealtyApp/changeValueFoodViewControlelr.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "157191BA-2016-4905-8B0C-B5E9B257D56C - 59753ed8eb0dcae3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealtyApp.changeValueFoodViewControlelr.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; HealtyApp.changeValueFoodViewControlelr"
+                  moduleName = "HealtyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcocalio/Desktop/Progetti/HealtyApp/HealtyApp/changeValueFoodViewControlelr.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  uuid = "157191BA-2016-4905-8B0C-B5E9B257D56C - 7e259f81bd958eec"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealtyApp.changeValueFoodViewControlelr.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;HealtyApp.changeValueFoodViewControlelr&gt;"
+                  moduleName = "HealtyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcocalio/Desktop/Progetti/HealtyApp/HealtyApp/changeValueFoodViewControlelr.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "119">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

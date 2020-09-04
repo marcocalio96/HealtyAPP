@@ -29,10 +29,6 @@ class chooseViewController: UIViewController {
         func doSomething() {
             performSegue(withIdentifier: "addFood", sender: nil)
         }
-    
-    func parseFood(food : Food){
-        print("funziona?")
-    }
 
 }
 extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
@@ -49,18 +45,31 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "IdCell", for: indexPath)
-        cell.textLabel?.text=foods[indexPath.row].name + "  \(foods[indexPath.row].calories) kcal    C:\(foods[indexPath.row].carbo)    P:\(foods[indexPath.row].protein)    G:\(foods[indexPath.row].fat)"
+        cell.textLabel?.text=foods[indexPath.row].name + "  \(foods[indexPath.row].calories) kcal  " + String(format: "C : %.1fg ", foods[indexPath.row].carbo) + String(format: "P : %.1fg ", foods[indexPath.row].protein) + String(format: "G : %.1fg", foods[indexPath.row].fat)
         return cell
         
         }
     
-    @IBAction func unwindToList(_ unwindSegue: UIStoryboardSegue) {
-       print("Funziona", #function)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "changeFood", sender: indexPath.row)
+    }
+    
+    /*@IBAction func unwindToList(_ unwindSegue: UIStoryboardSegue) {
         let source = unwindSegue.source as! AddFoodViewController
         foods.insert(Food.init(name: source.sFoodName, calories: source.tcalories, protein: source.tprotein, carbo: source.tcarbo, fat: source.tfat), at: foods.count)
         print(foods)
         tableView.reloadData()
         print("Ricarica")
+    }*/
+    
+    func parseFood(foods : [Food])  {
+        self.foods = foods
     }
     
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is changeValueFoodViewControlelr {
+            let passValue = segue.destination as! changeValueFoodViewControlelr
+            passValue.food_name = "Pollo"
+            }
+        }
+    }
