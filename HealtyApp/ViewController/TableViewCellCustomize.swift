@@ -16,7 +16,10 @@ class TableViewCellCustomize: UITableViewCell {
     @IBOutlet weak var proteinLabel: UILabel!
     @IBOutlet weak var carboLabel: UILabel!
     @IBOutlet weak var chilocal: UILabel!
+    @IBOutlet weak var progressPro: UIProgressView!
     
+    @IBOutlet weak var progressCarbo: UIProgressView!
+    @IBOutlet weak var progressFat: UIProgressView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

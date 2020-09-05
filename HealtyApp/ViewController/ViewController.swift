@@ -65,6 +65,15 @@ class ViewController: UIViewController {
         if let source = unwindSegue.source as? changeValueFoodViewControlelr {
             if let oldfood = source.oldValue {
                 if let newFood = source.newValue {
+                    if (source.flag){
+                        totCal+=newFood.calories
+                        totCarbo+=newFood.carbo
+                        totProtein+=newFood.protein
+                        totFat+=newFood.fat
+                        list_of_food.append(newFood)
+                        printValue()
+                    }
+                    else {
                     print(totCal)
                     totCal=totCal-oldfood.calories + newFood.calories
                     totFat=totFat-oldfood.fat + newFood.fat
@@ -72,7 +81,7 @@ class ViewController: UIViewController {
                     totCarbo=totCarbo-oldfood.carbo + newFood.carbo
                     printValue()
                     list_of_food[source.position] = newFood
-                                   
+                    }
                  }
                 
                

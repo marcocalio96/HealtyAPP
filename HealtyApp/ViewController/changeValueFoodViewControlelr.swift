@@ -24,6 +24,7 @@ class changeValueFoodViewControlelr: UIViewController {
     var oldWeight : Double = 0.0
     var oldValue : Food? = nil
     var newValue : Food? =  nil
+    var flag : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title=food_name

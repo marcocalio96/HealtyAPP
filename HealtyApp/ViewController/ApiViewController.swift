@@ -1,43 +1,26 @@
 //
-//  chooseViewController.swift
+//  ApiViewController.swift
 //  HealtyApp
 //
-//  Created by Marco Caliò on 03/09/2020.
+//  Created by Marco Caliò on 05/09/2020.
 //  Copyright © 2020 Marco Caliò. All rights reserved.
 //
 
 import UIKit
 
-class chooseViewController: UIViewController {
-    var foods : [Food] = []
+class ApiViewController: UIViewController {
+    
+    private var foods : [Food] = [Food(name: "Petto di pollo", calories: 102, protein: 23, carbo: 0, fat: 3, weight: 100), Food(name: "Olio Evo", calories: 90, protein: 0, carbo: 0, fat: 10, weight: 100), Food(name: "Pasta", calories: 250, protein: 11, carbo: 70, fat: 3, weight: 100)]
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.title="Cosa hai mangiato 😋"
         tableView.delegate=self
         tableView.dataSource=self
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-    let button1 = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(doSomething))
-    let button2 = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(doSomething2))
         
-     navigationItem.rightBarButtonItems = [button1, button2]
     }
-        @objc
-        func doSomething() {
-            performSegue(withIdentifier: "addFood", sender: nil)
-        }
-    
-    @objc
-    func doSomething2() {
-        performSegue(withIdentifier: "chooseApi", sender: nil)
-    }
-
 }
-
-extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
+    extension ApiViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
@@ -46,8 +29,6 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "IdCell", for: indexPath)
@@ -95,6 +76,8 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
             passValue.protein=foods[index].protein
             passValue.position=index
             passValue.oldWeight=foods[index].weight
+            passValue.flag=true
             }
         }
     }
+
