@@ -11,6 +11,7 @@ import UIKit
 class chooseViewController: UIViewController {
     var foods : [Food] = []
     @IBOutlet weak var tableView: UITableView!
+    private var sumMacro : Double = 0
     override func viewDidLoad() {
         super.viewDidLoad()
          self.title="Cosa hai mangiato 😋"
@@ -57,6 +58,7 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
         newcell.carboLabel.text=String(format: "%.1fg ", foods[indexPath.row].carbo)
         newcell.proteinLabel.text=String(format: "%.1fg ", foods[indexPath.row].protein)
         newcell.fatLabel.text=String(format: "%.1fg", foods[indexPath.row].fat)
+        sumMacro=foods[indexPath.row].fat + foods[indexPath.row].protein + foods[indexPath.row].carbo
         progresBar(progress: newcell.progressFat, value: foods[indexPath.row].fat, wei :foods[indexPath.row].weight)
         progresBar(progress: newcell.progressPro, value: foods[indexPath.row].protein, wei: foods[indexPath.row].weight)
         progresBar(progress: newcell.progressCarbo, value: foods[indexPath.row].carbo, wei: foods[indexPath.row].weight)
@@ -65,7 +67,9 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
         }
     
     func progresBar(progress : UIProgressView, value : Double, wei : Double)  {
-        progress.setProgress(Float((value/wei)), animated: true)
+        UIView.animate(withDuration: 0.5) {
+            progress.setProgress(Float((value/self.sumMacro)), animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -95,6 +99,7 @@ extension chooseViewController : UITableViewDelegate, UITableViewDataSource {
             passValue.protein=foods[index].protein
             passValue.position=index
             passValue.oldWeight=foods[index].weight
+
             }
         }
     }
