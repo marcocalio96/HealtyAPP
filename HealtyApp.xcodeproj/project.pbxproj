@@ -100,8 +100,6 @@
 				3C2278C32502269B00CFE6E2 /* changeValueFoodViewControlelr.swift */,
 				3CD49805249E4357001CB335 /* SecondViewController.swift */,
 				3C84A2832502C03F0049BA1D /* TableViewCellCustomize.swift */,
-				3CD497DB249E1803001CB335 /* Main.storyboard */,
-				3CD497E0249E1805001CB335 /* LaunchScreen.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -140,6 +138,8 @@
 				3C2278C72502952200CFE6E2 /* Class */,
 				3C2278C62502950300CFE6E2 /* ViewController */,
 				3CD497D7249E1803001CB335 /* SceneDelegate.swift */,
+				3CD497DB249E1803001CB335 /* Main.storyboard */,
+				3CD497E0249E1805001CB335 /* LaunchScreen.storyboard */,
 				3CD497D5249E1803001CB335 /* AppDelegate.swift */,
 				3CD497E3249E1805001CB335 /* Info.plist */,
 				3CD497DE249E1805001CB335 /* Assets.xcassets */,

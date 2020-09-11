@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var fat: UILabel!
     @IBOutlet weak var Button: UIButton!
     @IBOutlet weak var groupView: UIView!
+    @IBOutlet weak var contentView: UIView!
     
     var totCal = 0.0
     var totCarbo = 0.0
@@ -26,11 +27,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Bentornato Marco 💪"
+    
         caloriesOfTheDay.text="0"
         Button.layer.shadowColor = UIColor.black.cgColor
-        Button.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        Button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         Button.layer.shadowRadius = 3
         Button.layer.shadowOpacity = 0.5
+        contentView.layer.cornerRadius=20
+        
         
     }
     
